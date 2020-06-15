@@ -19,21 +19,17 @@ if (personalMovieDB.count < 10) {
 } else {
     alert ("Произошла ошибка");
 }
-let i =1;
 
-do {
+
+for (let i = 1; i < 3; i++) {
     const a = prompt ("Один из последних просмотренных фильмов?");
     const b = prompt ("На сколько оцените его??");
-    i++;
     if (a == "" || a == null || a.length > 50 || b == "" || b == null) {
         i--;
     } else {
         personalMovieDB.movies[a]=b;
     }
-} while (i < 3);
-
-
-
+}
 
 
 console.log(personalMovieDB);
